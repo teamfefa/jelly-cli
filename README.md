@@ -29,8 +29,27 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`jelly card CARDNUMBER [CARDNAME]`](#jelly-card-cardnumber-cardname)
 * [`jelly hello [FILE]`](#jelly-hello-file)
 * [`jelly help [COMMAND]`](#jelly-help-command)
+
+## `jelly card CARDNUMBER [CARDNAME]`
+
+opens a card for development
+
+```
+USAGE
+  $ jelly card CARDNUMBER [CARDNAME]
+
+ARGUMENTS
+  CARDNUMBER  The card number from Trello
+  CARDNAME    A short name to help remember what this card was, useful when looking back at all your git branches
+
+EXAMPLE
+  $ jelly card 1337
+```
+
+_See code: [src/commands/card.ts](https://github.com/teamfefa/jelly-cli/blob/v0.1.0/src/commands/card.ts)_
 
 ## `jelly hello [FILE]`
 
