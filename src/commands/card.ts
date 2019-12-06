@@ -34,7 +34,7 @@ export default class Card extends Command {
       branchName += `-${args.cardName}`
     }
 
-    let tasks = [
+    let gitTasks = [
       {
         title: 'Check git environment',
         task: () => {
@@ -79,26 +79,32 @@ export default class Card extends Command {
       }
     ];
 
-    if (flags.setup) {
-      tasks = tasks.concat([
-        {
-          title: 'Install Ruby dependencies with Bundler',
-          task: (ctx, task) => execa('bundle', ['install'])
-        },
-        {
-          title: 'Install JS dependencies with Yarn',
-          task: (ctx, task) => execa('yarn', ['install', '--check-files'])
-            .catch(() => {
-              ctx.yarn = false;
+    let setupTasks = [
+      {
+        title: 'Install Ruby dependencies with Bundler',
+        task: (ctx, task) => execa('bundle', ['install'])
+      },
+      {
+        title: 'Install JS dependencies with Yarn',
+        task: (ctx, task) => execa('yarn', ['install', '--check-files'])
+          .catch(() => {
+            ctx.yarn = false;
 
-              task.skip('Yarn not available, install it via `npm install -g yarn`');
-            })
-        },
-        {
-          title: 'Setup development database',
-          task: (ctx, task) => execa('rails', ['db:setup'])
-        }
-      ]);
+            task.skip('Yarn not available, install it via `npm install -g yarn`');
+          })
+      },
+      {
+        title: 'Setup development database',
+        task: (ctx, task) => execa('rails', ['db:setup'])
+      }
+    ];
+
+    let tasks = []
+
+    tasks = tasks.concat(gitTasks)
+
+    if (flags.setup) {
+      tasks = tasks.concat(setupTasks)
     }
 
     new Listr(tasks).run().catch(err => {
