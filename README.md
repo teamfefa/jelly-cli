@@ -20,7 +20,7 @@ $ npm install -g jelly-cli
 $ jelly COMMAND
 running command...
 $ jelly (-v|--version|version)
-jelly-cli/0.1.1 darwin-x64 node-v12.13.1
+jelly-cli/0.1.2 darwin-x64 node-v12.13.1
 $ jelly --help [COMMAND]
 USAGE
   $ jelly COMMAND
@@ -53,7 +53,7 @@ EXAMPLE
   $ jelly card 1337
 ```
 
-_See code: [src/commands/card.ts](https://github.com/teamfefa/jelly-cli/blob/v0.1.1/src/commands/card.ts)_
+_See code: [src/commands/card.ts](https://github.com/teamfefa/jelly-cli/blob/v0.1.2/src/commands/card.ts)_
 
 ## `jelly hello [FILE]`
 
@@ -73,7 +73,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/teamfefa/jelly-cli/blob/v0.1.1/src/commands/hello.ts)_
+_See code: [src/commands/hello.ts](https://github.com/teamfefa/jelly-cli/blob/v0.1.2/src/commands/hello.ts)_
 
 ## `jelly help [COMMAND]`
 
@@ -104,5 +104,5 @@ EXAMPLE
   $ jelly sync
 ```
 
-_See code: [src/commands/sync.ts](https://github.com/teamfefa/jelly-cli/blob/v0.1.1/src/commands/sync.ts)_
+_See code: [src/commands/sync.ts](https://github.com/teamfefa/jelly-cli/blob/v0.1.2/src/commands/sync.ts)_
 <!-- commandsstop -->

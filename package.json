@@ -1,7 +1,7 @@
 {
   "name": "jelly-cli",
   "description": "Your Personal Jellyfish",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "@teamfefa",
   "bin": {
     "jelly": "./bin/run"
