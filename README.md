@@ -20,7 +20,7 @@ $ npm install -g jelly-cli
 $ jelly COMMAND
 running command...
 $ jelly (-v|--version|version)
-jelly-cli/0.1.0 darwin-x64 node-v12.13.0
+jelly-cli/0.1.0 darwin-x64 node-v12.13.1
 $ jelly --help [COMMAND]
 USAGE
   $ jelly COMMAND
@@ -32,6 +32,7 @@ USAGE
 * [`jelly card CARDNUMBER [CARDNAME]`](#jelly-card-cardnumber-cardname)
 * [`jelly hello [FILE]`](#jelly-hello-file)
 * [`jelly help [COMMAND]`](#jelly-help-command)
+* [`jelly sync`](#jelly-sync)
 
 ## `jelly card CARDNUMBER [CARDNAME]`
 
@@ -44,6 +45,9 @@ USAGE
 ARGUMENTS
   CARDNUMBER  The card number from Trello
   CARDNAME    A short name to help remember what this card was, useful when looking back at all your git branches
+
+OPTIONS
+  -s, --setup
 
 EXAMPLE
   $ jelly card 1337
@@ -87,4 +91,18 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
+
+## `jelly sync`
+
+sync your fork's master branch with upstream
+
+```
+USAGE
+  $ jelly sync
+
+EXAMPLE
+  $ jelly sync
+```
+
+_See code: [src/commands/sync.ts](https://github.com/teamfefa/jelly-cli/blob/v0.1.0/src/commands/sync.ts)_
 <!-- commandsstop -->
