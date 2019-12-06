@@ -2,7 +2,7 @@
   "name": "jelly-cli",
   "description": "Your Personal Jellyfish",
   "version": "0.1.0",
-  "author": "Sergio Pantoja @sergiopantoja",
+  "author": "@teamfefa",
   "bin": {
     "jelly": "./bin/run"
   },
